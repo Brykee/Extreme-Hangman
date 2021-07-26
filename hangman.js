@@ -1,5 +1,5 @@
 var words =
-  'Agony Lunatic Apocalypse Lurking Armageddon Massacre Assault Meltdown Backlash Menacing Beating Mired Beware Mistake Blinded Murder Blood Nightmare Bloodbath Painful Bloodcurdling Pale Bloody Panic Blunder Peril Bomb Piranha Buffoon Pitfall Bumbling Plague Cadaver Played Catastrophe Plummet Caution Plunge Collapse Poison Corpse Poor Crazy Prison Cripple Pummel Crisis Pus Danger Reckoning Dark Refugee Deadly Revenge Death Risky Deceiving Scary Destroy Scream Devastating Searing Disastrous Shame Doom Shatter Drowning Shellacking Dumb Shocked Embarrass Silly Fail Slaughter Feeble Slave Fired Strangle Fool Stupid Fooled Suicide Frantic Tailspin Frightening Tank Gambling Targeted Gullible Teetering Hack Terror Hazardous Terrorist Hoax Torture Holocaust Toxic Horrific Tragedy Hurricane Trap Injure Vaporize Insidious Victim epidemic cataclysmic bufoon	suffering reckoning trauma dangerous annihilate invasion volatile vulnerable jail warning jeopardy nerd lawsuit wounded looming cringeworthy last fugacious worry havoc';
+  'agony lunatic apocalypse Lurking armageddon massacre assault meltdown backlash menacing beating beware mistake blinded murder blood nightmare bloodbath painful bloodcurdling pale bloody panic blunder peril bomb piranha buffoon pitfall bumbling plague cadaver played catastrophe plummet caution plunge collapse poison corpse poor crazy prison cripple pummel crisis pus danger reckoning dark refugee deadly revenge death risky deceiving scary destroy scream devastating searing disastrous shame doom shatter drowning dumb shocked embarrass silly fail slaughter feeble slave fired strangle fool stupid fooled suicide frantic tailspin frightening tank gambling targeted gullible teetering hack terror hazardous terrorist hoax torture holocaust toxic horrific tragedy hurricane trap injure vaporize insidious victim epidemic cataclysmic bufoon	suffering reckoning trauma dangerous annihilate invasion volatile vulnerable jail warning jeopardy nerd lawsuit wounded looming cringeworthy last fugacious worry havoc';
 
 let answer = '';
 let maxWrong = 6;
@@ -11,7 +11,7 @@ var wordsArray = words.split(' ');
 console.log(wordsArray);
 
 function randomWord() {
-  answer = words[Math.floor(Math.random() * words.length)];
+  answer = wordsArray[Math.floor(Math.random() * wordsArray.length)];
 }
 
 function generateButtons() {
