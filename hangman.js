@@ -2,7 +2,7 @@ var words =
   'agony lunatic apocalypse Lurking armageddon massacre assault meltdown backlash menacing beating beware mistake blinded murder blood nightmare bloodbath painful bloodcurdling pale bloody panic blunder peril bomb piranha buffoon pitfall bumbling plague cadaver played catastrophe plummet caution plunge collapse poison corpse poor crazy prison cripple pummel crisis pus danger reckoning dark refugee deadly revenge death risky deceiving scary destroy scream devastating searing disastrous shame doom shatter drowning dumb shocked embarrass silly fail slaughter feeble slave fired strangle fool stupid fooled suicide frantic tailspin frightening tank gambling targeted gullible teetering hack terror hazardous terrorist hoax torture holocaust toxic horrific tragedy hurricane trap injure vaporize insidious victim epidemic cataclysmic bufoon	suffering reckoning trauma dangerous annihilate invasion volatile vulnerable jail warning jeopardy nerd lawsuit wounded looming cringeworthy last fugacious worry havoc';
 
 let answer = '';
-let maxWrong = 6;
+let maxWrong = 7;
 let mistakes = 0;
 let guessed = [];
 let wordStatus = null;
