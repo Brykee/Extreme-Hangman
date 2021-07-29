@@ -1,5 +1,5 @@
 var words =
-  'agony lunatic apocalypse Lurking armageddon massacre assault meltdown backlash menacing beating beware mistake blinded murder blood nightmare bloodbath painful bloodcurdling pale bloody panic blunder peril bomb piranha buffoon pitfall bumbling plague cadaver played catastrophe plummet caution plunge collapse poison corpse poor crazy prison cripple pummel crisis pus danger reckoning dark refugee deadly revenge death risky deceiving scary destroy scream devastating searing disastrous shame doom shatter drowning dumb shocked embarrass silly fail slaughter feeble slave fired strangle fool stupid fooled suicide frantic tailspin frightening tank gambling targeted gullible teetering hack terror hazardous terrorist hoax torture holocaust toxic horrific tragedy hurricane trap injure vaporize insidious victim epidemic cataclysmic bufoon	suffering reckoning trauma dangerous annihilate invasion volatile vulnerable jail warning jeopardy nerd lawsuit wounded looming cringeworthy last fugacious worry havoc';
+  'agony lunatic apocalypse Lurking armageddon massacre assault meltdown backlash menacing beating beware mistake blinded murder blood nightmare bloodbath painful bloodcurdling pale bloody panic blunder peril bomb piranha buffoon pitfall plague cadaver played catastrophe plummet caution plunge collapse poison corpse poor crazy prison cripple pummel crisis pus danger reckoning dark refugee deadly revenge death risky deceiving scary destroy scream devastating searing disastrous shame doom shatter drowning dumb shocked embarrass silly fail slaughter feeble slave fired strangle fool stupid fooled suicide frantic tailspin frightening tank gambling targeted gullible teetering hack terror hazardous terrorist hoax torture holocaust toxic horrific tragedy hurricane trap injure vaporize insidious victim epidemic cataclysmic bufoon	suffering reckoning trauma dangerous annihilate invasion volatile vulnerable jail warning jeopardy nerd lawsuit wounded looming cringeworthy last fugacious worry havoc hazard';
 
 let answer = '';
 let maxWrong = 7;
@@ -21,7 +21,7 @@ function generateButtons() {
       (letter) =>
         `
       <button
-        class="btn btn-lg btn-primary m-2"
+        class= "btn btn-lg btn-primary m-2"
         id='` +
         letter +
         `'
@@ -43,10 +43,12 @@ function generateButtons() {
 function handleGuess(chosenLetter) {
   guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
   document.getElementById(chosenLetter).setAttribute('disabled', true);
+  document.getElementById(chosenLetter).style.color = 'red';
 
   if (answer.indexOf(chosenLetter) >= 0) {
     guessedWord();
     checkIfGameWon();
+    document.getElementById(chosenLetter).style.color = 'blue';
   } else if (answer.indexOf(chosenLetter) === -1) {
     mistakes++;
     updateMistakes();
@@ -69,7 +71,8 @@ function checkIfGameLost() {
   if (mistakes === maxWrong) {
     document.getElementById('wordSpotlight').innerHTML =
       'The answer was: ' + answer;
-    document.getElementById('keyboard').innerHTML = 'You Lost!!!';
+    document.getElementById('keyboard').innerHTML = 'You Have Failed';
+    document.getElementById('introPara').style.visibility = 'hidden';
   }
 }
 
@@ -87,6 +90,7 @@ function updateMistakes() {
 }
 
 function reset() {
+  document.getElementById('introPara').style.visibility = 'visable';
   mistakes = 0;
   guessed = [];
   document.getElementById('hangmanPic').src = './images/0.jpg';
@@ -98,7 +102,6 @@ function reset() {
 }
 
 document.getElementById('maxWrong').innerHTML = maxWrong;
-
 randomWord();
 generateButtons();
 guessedWord();
