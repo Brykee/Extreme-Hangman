@@ -1,16 +1,19 @@
 body {
   background-image: url('https://media3.giphy.com/media/H54wGN3OwD8Wc/giphy.gif?cid=ecf05e47ofu84u3u2qleqfkwrw9gy2xa92tw8q24wc8w38dv&rid=giphy.gif&ct=g');
   background-repeat: no-repeat;
-  background-color: #3a0101;
   height: 500px;
   background-position: center;
   background-size: cover;
-  position: relative;
 
   font-size: 30px;
   color: rgb(165, 2, 2);
   font-family: 'Eater', cursive;
   text-align: center;
+  vertical-align: middle;
+  background-color: #3a0101;
+}
+
+.pic {
   vertical-align: middle;
 }
 
@@ -34,4 +37,6 @@ button:hover {
 
 footer {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  position: relative;
 }
